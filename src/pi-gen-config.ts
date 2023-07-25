@@ -76,12 +76,12 @@ export async function validateConfig(config: PiGenConfig): Promise<void> {
   }
 
   if (
-    !['bullseye', 'jessie', 'stretch', 'buster', 'testing'].includes(
+    !['bullseye', 'jessie', 'stretch', 'buster', 'testing', 'bookworm'].includes(
       config.release?.toLowerCase()
     )
   ) {
     throw new Error(
-      'release must be one of ["bullseye", "jessie", "stretch", "buster", "testing"]'
+      'release must be one of ["bullseye", "jessie", "stretch", "buster", "testing", "bookworm"]'
     )
   }
 
